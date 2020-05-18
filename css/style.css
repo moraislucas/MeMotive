@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Questrial', sans-serif;
+    color: #FFF;
+}
+
+body {
+    background: linear-gradient(to right, #41295a, #2f0743);
+    overflow: hidden;
+}
+
+.estrutura {
+    max-width: 960px;
+    height: 75vh;
+    margin: 140px auto;
+    padding: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.estrutura blockquote p {
+    font-size: 1.9rem;
+    line-height: 41px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.estrutura blockquote p::before {
+    content: '“';
+    position: absolute;
+    font-size: 5rem;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.5);
+    top: 10px;
+    left: 10px;
+}
+
+.estrutura blockquote cite {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.estrutura blockquote cite::before {
+    content: '';
+    height: 2px;
+    width: 20px;
+    display: inline-block;
+    background: #FFF;
+    margin-right: 10px;
+}
+
+.estrutura button {
+    font-family: 'Inter', sans-serif;
+    border: none;
+    background: #000125;
+    padding: 20px 40px;
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: .975rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    transition: .3s ease;
+    outline: none;
+}
+
+.estrutura button:hover {
+    background: rgb(15, 17, 48);
+    transform: translate3d(0, -5px, 0);
+}
+
+.estrutura footer {
+    text-align: right;
+}
+
+.estrutura footer p {
+    font-size: 1rem;
+    color: rgb(233, 233, 233);
+}
+
+.estrutura footer p a {
+    text-decoration: none;
+    font-size: 1.1rem;
+
+}
+
+.estrutura footer p a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width:560px) {
+    .estrutura {
+        padding: 20px 80px;
+    }
+
+    .estrutura blockquote p {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .estrutura blockquote p::before {
+        font-size: 4rem;
+        top: 20px;
+        left: 40px;
+    }
+
+    .estrutura blockquote cite {
+        font-size: 1rem;
+    }
+
+    .estrutura button {
+        padding: 18px 30px;
+    }
+}
