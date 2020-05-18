@@ -30,8 +30,12 @@ function init(SeletorFrase, seletorAutor, seletorBtn) {
             const colorsJSON = await (await colorsResponse).json();
             // Puxando as cores de forma aleatoria
             const aleatorioColors = colorsJSON[Math.floor(Math.random() * 334)].colors;
-            // Altera a cor do body
-            body.style.backgroundImage = `linear-gradient(to right, ${aleatorioColors[1]}, ${aleatorioColors[0]}`
+
+            // Altera a cor do body com gradient
+            // body.style.backgroundImage = `linear-gradient(to right, ${aleatorioColors[1]}, ${aleatorioColors[0]}`
+
+            //    Adiocionando apenas uma cor, sem gradient, teste
+            body.style.background = aleatorioColors[1];
 
         }
 
