@@ -60,15 +60,23 @@ body {
 .estrutura button {
     font-family: 'Inter', sans-serif;
     border: none;
-    background: #000125;
+    background: rgb(0, 1, 37);
     padding: 20px 40px;
     cursor: pointer;
     margin-top: 40px;
     font-size: .975rem;
     border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 0 0 rgba(0, 1, 37, .7);
     transition: .3s ease;
     outline: none;
+
+    animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 10px rgb(0, 1, 37, 0);
+    }
 }
 
 .estrutura button:hover {
