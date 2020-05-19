@@ -25,7 +25,7 @@ function init(SeletorFrase, seletorAutor, seletorBtn) {
             // Gradient Colors API
 
             // Faz um fetch na url
-            const colorsResponse = await (fetch('http://uigradients.com/gradients.json'));
+            const colorsResponse = await (fetch('https://uigradients.com/gradients.json'));
             // Aguarda o retorno do Fetch e transforma em JSON
             const colorsJSON = await (await colorsResponse).json();
             // Puxando as cores de forma aleatoria
