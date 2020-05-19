@@ -9,33 +9,47 @@ function init(SeletorFrase, seletorAutor, seletorBtn) {
     if (frase && autor && btn) {
         // Função Assincrona puxando a frase da API
         async function activeApp() {
+            try {
+                // Frase API
 
-            // Frase API
-            const dadosResponse = await (fetch('https://api-motivaai.nandomoreira.dev/v1/phrases'));
-            const dadosJSON = await (await dadosResponse).json();
-            const aleatorio = dadosJSON[Math.floor(Math.random() * 200)];
-            frase.innerText = aleatorio.quote;
-            autor.innerText = aleatorio.author;
+                // Faz um fetch na url
+                const dadosResponse = await (fetch('https://api-motivaai.nandomoreira.dev/v1/phrases'));
+                // Aguarda o retorno do Fetch e transforma em JSON
+                const dadosJSON = await (await dadosResponse).json();
+                // Puxando as frases de forma aleatoria
+                const aleatorio = dadosJSON[Math.floor(Math.random() * 200)];
 
+                // Insere os dados no DOM
+                frase.innerText = aleatorio.quote;
+                autor.innerText = aleatorio.author;
+                return gradientColor();
 
-            return gradientColor();
+            } catch (erro) {
+                console.log(erro);
+            }
+
         }
 
         async function gradientColor() {
             // Gradient Colors API
 
-            // Faz um fetch na url
-            const colorsResponse = await (fetch('https://uigradients.com/gradients.json'));
-            // Aguarda o retorno do Fetch e transforma em JSON
-            const colorsJSON = await (await colorsResponse).json();
-            // Puxando as cores de forma aleatoria
-            const aleatorioColors = colorsJSON[Math.floor(Math.random() * 334)].colors;
+            try {
+                // Faz um fetch na url
+                const colorsResponse = await (fetch('https://uigradients.com/gradients.json'));
+                // Aguarda o retorno do Fetch e transforma em JSON
+                const colorsJSON = await (await colorsResponse).json();
+                // Puxando as cores de forma aleatoria
+                const aleatorioColors = colorsJSON[Math.floor(Math.random() * 334)].colors;
 
-            // Altera a cor do body com gradient
-            // body.style.backgroundImage = `linear-gradient(to right, ${aleatorioColors[1]}, ${aleatorioColors[0]}`
+                // Altera a cor do body com gradient
+                // body.style.backgroundImage = `linear-gradient(to right, ${aleatorioColors[1]}, ${aleatorioColors[0]}`
 
-            //    Adiocionando apenas uma cor, sem gradient, teste
-            body.style.background = aleatorioColors[0];
+                //    Adiocionando apenas uma cor, sem gradient, teste
+                body.style.background = aleatorioColors[0];
+            } catch (erro) {
+                console.log(erro)
+            }
+
 
         }
 
