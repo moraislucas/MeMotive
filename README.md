@@ -5,10 +5,9 @@ Visualizar Projeto: [Clique aqui](https://moraislucas.github.io/MeMotive/)
 
 ## Projeto
 
-Me Motive é uma aplicação para treino de Fetch API. É um gerador de frases motivacionais para dar uma levada no seu dia.
-Neste projeto utilizei a API de frases do [Nando Moreira](https://github.com/nandomoreirame) em junção com a API do uigradients para geração
-de gradientes de forma aleatória.
-
+Me Motive é uma aplicação para treino de Fetch API. É um gerador de frases motivacionais para dar um up no seu dia.
+Neste projeto utilizei uma API criada por mim com arquivos .JSON para treino de contrução e consumo de API's com Fetch do JS.
+Frases e Cores são puxadas de forma dinamica e mostradas ao usuario. 
 <br>
 
 ## Layout
@@ -17,6 +16,7 @@ de gradientes de forma aleatória.
 ## Aprendizados 
 - Fetch API
 - Geração de cores aleatórias
+- Criação de .JSON
 - Consumos de API
 - Treino de CSS
 
