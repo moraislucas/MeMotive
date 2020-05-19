@@ -35,7 +35,7 @@ function init(SeletorFrase, seletorAutor, seletorBtn) {
             // body.style.backgroundImage = `linear-gradient(to right, ${aleatorioColors[1]}, ${aleatorioColors[0]}`
 
             //    Adiocionando apenas uma cor, sem gradient, teste
-            body.style.background = aleatorioColors[1];
+            body.style.background = aleatorioColors[0];
 
         }
 
