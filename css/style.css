@@ -8,7 +8,7 @@
 
 body {
     background: linear-gradient(to right, #41295a, #2f0743);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .estrutura {
@@ -97,25 +97,38 @@ body {
 
 @media(max-width:560px) {
     .estrutura {
-        padding: 20px 80px;
+        padding: 60px 30px;
+        margin: 30px auto;
+        height: 90vh;
     }
 
     .estrutura blockquote p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        letter-spacing: 1;
         line-height: 1.3;
     }
 
     .estrutura blockquote p::before {
         font-size: 4rem;
-        top: 20px;
-        left: 40px;
+        top: 10px;
+        left: 15px;
     }
 
     .estrutura blockquote cite {
-        font-size: 1rem;
+        font-size: .875rem;
     }
 
     .estrutura button {
         padding: 18px 30px;
+    }
+
+    .estrutura footer p {
+        font-size: .875rem;
+    }
+
+    .estrutura footer p a {
+        text-decoration: none;
+        font-size: .975rem;
+
     }
 }
