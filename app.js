@@ -13,7 +13,7 @@ function init(SeletorFrase, seletorAutor, seletorBtn) {
                 // Frase API
 
                 // Faz um fetch na url
-                const dadosResponse = await (fetch('https://api-motivaai.nandomoreira.dev/v1/phrases'));
+                const dadosResponse = await (fetch('./phrases.json'));
                 // Aguarda o retorno do Fetch e transforma em JSON
                 const dadosJSON = await (await dadosResponse).json();
                 // Puxando as frases de forma aleatoria
@@ -35,17 +35,15 @@ function init(SeletorFrase, seletorAutor, seletorBtn) {
 
             try {
                 // Faz um fetch na url
-                const colorsResponse = await (fetch('https://uigradients.com/gradients.json'));
+                const colorsResponse = await (fetch('./colors.json'));
                 // Aguarda o retorno do Fetch e transforma em JSON
                 const colorsJSON = await (await colorsResponse).json();
                 // Puxando as cores de forma aleatoria
-                const aleatorioColors = colorsJSON[Math.floor(Math.random() * 334)].colors;
 
-                // Altera a cor do body com gradient
-                // body.style.backgroundImage = `linear-gradient(to right, ${aleatorioColors[1]}, ${aleatorioColors[0]}`
+                const aleatorioColors = colorsJSON[Math.floor(Math.random() * 85)].color;
 
-                //    Adiocionando apenas uma cor, sem gradient, teste
-                body.style.background = aleatorioColors[0];
+                // Adicionado cor ao Body
+                body.style.background = aleatorioColors;
             } catch (erro) {
                 console.log(erro)
             }
